@@ -1,17 +1,16 @@
 {
   "name": "tekunda",
   "version": "1.0.0",
-  "description": "Tekunda's Claude Code plugin marketplace. Re-exposes upstream plugins at always-latest (ref: main, unpinned) plus room for Tekunda-specific tooling — no forking, no vendoring.",
+  "description": "Tekunda's Claude Code plugin marketplace. Re-exposes upstream plugins at always-latest (ref: main, no sha pin) plus room for Tekunda-specific tooling — no forking, no vendoring.",
   "owner": {
     "name": "Tekunda"
   },
   "plugins": [
     {
       "name": "salesforce-development",
-      "displayName": "Salesforce Development",
       "description": "Salesforce platform development skills, re-exposed from forcedotcom/sf-skills (upstream latest on main).",
       "source": {
-        "type": "git",
+        "source": "git-subdir",
         "url": "https://github.com/forcedotcom/sf-skills.git",
         "path": "plugins/builder/salesforce-development",
         "ref": "main"
