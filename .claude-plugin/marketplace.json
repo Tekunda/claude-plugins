@@ -15,6 +15,30 @@
         "path": "plugins/builder/salesforce-development",
         "ref": "main"
       }
+    },
+    {
+      "name": "superpowers",
+      "description": "obra/superpowers — TDD, verification-before-completion and related engineering skills (upstream latest).",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/obra/superpowers.git"
+      }
+    },
+    {
+      "name": "claude-seo",
+      "description": "AgriciDaniel/claude-seo — SEO skill for metadata, structured data, sitemaps, OG tags (upstream latest).",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/AgriciDaniel/claude-seo.git"
+      }
+    },
+    {
+      "name": "ponytail",
+      "description": "DietrichGebert/ponytail — laziest-solution / anti-over-engineering skill (upstream latest).",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/DietrichGebert/ponytail.git"
+      }
     }
   ]
 }
