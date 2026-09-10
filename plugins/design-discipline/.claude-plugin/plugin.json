@@ -1,0 +1,9 @@
+{
+  "name": "design-discipline",
+  "description": "Senior product-design judgment for any web UI work: restraint over cramming, mobile-first layout, hierarchy, spacing, and coherent interactive states. Loads before building or editing UI so components read as intentional, not AI slop.",
+  "version": "1.0.0",
+  "author": { "name": "Tekunda" },
+  "license": "UNLICENSED",
+  "repository": "https://github.com/Tekunda/claude-plugins.git",
+  "keywords": ["frontend", "design", "ui", "mobile-first", "responsive"]
+}
