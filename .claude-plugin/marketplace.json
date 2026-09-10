@@ -39,6 +39,16 @@
         "source": "url",
         "url": "https://github.com/DietrichGebert/ponytail.git"
       }
+    },
+    {
+      "name": "design-discipline",
+      "description": "Generic frontend design-discipline skill: restraint, mobile-first, hierarchy, coherent states.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Tekunda/claude-plugins.git",
+        "path": "plugins/design-discipline",
+        "ref": "main"
+      }
     }
   ]
 }
