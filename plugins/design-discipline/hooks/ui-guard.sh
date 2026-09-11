@@ -11,10 +11,15 @@ input="$(cat 2>/dev/null)"
 [ -z "$input" ] && exit 0
 
 # Portable extraction of tool_input.file_path (no jq dependency).
-# Matches the first "file_path": "..." and captures up to the next quote.
+# grep -oE lists every "file_path":"..." match in order; head -n 1 takes the
+# FIRST, which is the real tool_input.file_path key. A greedy sed would instead
+# capture the LAST occurrence, so a later escaped "file_path" inside an Edit's
+# old_string/new_string content could hijack the decision and skip a real UI
+# edit. First-match avoids that.
 file_path="$(printf '%s' "$input" \
-  | sed -n 's/.*"file_path"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' \
-  | head -n 1)"
+  | grep -oE '"file_path"[[:space:]]*:[[:space:]]*"[^"]*"' \
+  | head -n 1 \
+  | sed -E 's/.*:[[:space:]]*"([^"]*)"$/\1/')"
 
 # No parseable file_path -> nothing to advise on. Silent, fail-open.
 [ -z "$file_path" ] && exit 0

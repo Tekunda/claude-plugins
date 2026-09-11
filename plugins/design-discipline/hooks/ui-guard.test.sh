@@ -49,6 +49,12 @@ if [ -z "$out" ]; then check "md file is silent" 0; else check "md file is silen
 out="$(printf '%s' 'not json at all <<<' | bash "$GUARD")"; rc=$?
 if [ "$rc" -eq 0 ] && [ -z "$out" ]; then check "malformed stdin: exit 0, empty" 0; else check "malformed stdin: exit 0, empty" 1; fi
 
+# 6. Real file_path (.scss) precedes a LATER escaped "file_path" inside content
+#    (a .py). First-match must win -> guidance still emitted. This fails on a
+#    greedy last-match extractor.
+out="$(printf '%s' '{"tool_name":"Edit","tool_input":{"file_path":"apps/serpent-web/components/help-center/HelpCenter.module.scss","old_string":"a","new_string":"const p = {\"file_path\":\"scripts/x.py\"}"}}' | bash "$GUARD")"
+if printf '%s' "$out" | grep -q "TWO clusters" && is_valid_json "$out"; then check "first-match: scss wins over later escaped py file_path" 0; else check "first-match: scss wins over later escaped py file_path" 1; fi
+
 echo
 if [ "$fails" -eq 0 ]; then
   echo "All tests passed."
