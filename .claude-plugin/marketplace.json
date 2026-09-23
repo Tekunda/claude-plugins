@@ -50,7 +50,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Tekunda/claude-plugins.git",
         "path": "plugins/design-discipline",
-        "sha": "906539446742911579e4d317a2bd1d1165088b87"
+        "sha": "99b287edc5fc782b9aa64c671127f3d9b3c87200"
       }
     }
   ]
