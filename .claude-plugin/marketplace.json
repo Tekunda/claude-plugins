@@ -1,43 +1,46 @@
 {
   "name": "tekunda",
   "version": "1.0.0",
-  "description": "Tekunda's Claude Code plugin marketplace. Re-exposes upstream plugins at always-latest (ref: main, no sha pin) plus room for Tekunda-specific tooling — no forking, no vendoring.",
+  "description": "Tekunda's Claude Code plugin marketplace. Re-exposes upstream plugins plus room for Tekunda-specific tooling - no forking, no vendoring. Every source is pinned to a full commit SHA and bumped deliberately, never tracking a branch.",
   "owner": {
     "name": "Tekunda"
   },
   "plugins": [
     {
       "name": "salesforce-development",
-      "description": "Salesforce platform development skills, re-exposed from forcedotcom/sf-skills (upstream latest on main).",
+      "description": "Salesforce platform development skills, re-exposed from forcedotcom/sf-skills.",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/forcedotcom/sf-skills.git",
         "path": "plugins/builder/salesforce-development",
-        "ref": "main"
+        "sha": "c217b703b3e5a3c279f1a510d8703161b14bd0a5"
       }
     },
     {
       "name": "superpowers",
-      "description": "obra/superpowers — TDD, verification-before-completion and related engineering skills (upstream latest).",
+      "description": "obra/superpowers — TDD, verification-before-completion and related engineering skills.",
       "source": {
         "source": "url",
-        "url": "https://github.com/obra/superpowers.git"
+        "url": "https://github.com/obra/superpowers.git",
+        "sha": "5bf4e78011075bcfc0dc295f0724994cd123ee71"
       }
     },
     {
       "name": "claude-seo",
-      "description": "AgriciDaniel/claude-seo — SEO skill for metadata, structured data, sitemaps, OG tags (upstream latest).",
+      "description": "AgriciDaniel/claude-seo — SEO skill for metadata, structured data, sitemaps, OG tags.",
       "source": {
         "source": "url",
-        "url": "https://github.com/AgriciDaniel/claude-seo.git"
+        "url": "https://github.com/AgriciDaniel/claude-seo.git",
+        "sha": "92795530b4cc92c6bf7a2435b82c15b003e71181"
       }
     },
     {
       "name": "ponytail",
-      "description": "DietrichGebert/ponytail — laziest-solution / anti-over-engineering skill (upstream latest).",
+      "description": "DietrichGebert/ponytail — laziest-solution / anti-over-engineering skill.",
       "source": {
         "source": "url",
-        "url": "https://github.com/DietrichGebert/ponytail.git"
+        "url": "https://github.com/DietrichGebert/ponytail.git",
+        "sha": "e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156"
       }
     },
     {
@@ -47,7 +50,7 @@
         "source": "git-subdir",
         "url": "https://github.com/Tekunda/claude-plugins.git",
         "path": "plugins/design-discipline",
-        "ref": "main"
+        "sha": "906539446742911579e4d317a2bd1d1165088b87"
       }
     }
   ]
