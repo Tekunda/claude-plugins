@@ -5,6 +5,5 @@
   "author": { "name": "Tekunda" },
   "license": "UNLICENSED",
   "repository": "https://github.com/Tekunda/claude-plugins.git",
-  "keywords": ["frontend", "design", "ui", "mobile-first", "responsive"],
-  "hooks": "./hooks/hooks.json"
+  "keywords": ["frontend", "design", "ui", "mobile-first", "responsive"]
 }
