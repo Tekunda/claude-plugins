@@ -26,8 +26,8 @@
       }
     },
     {
-      "name": "claude-seo",
-      "description": "AgriciDaniel/claude-seo — SEO skill for metadata, structured data, sitemaps, OG tags.",
+      "name": "tekunda-seo",
+      "description": "Re-exposes AgriciDaniel/claude-seo under a Tekunda name (claude-seo is reserved by the CLI) — SEO skill for metadata, structured data, sitemaps, OG tags.",
       "source": {
         "source": "url",
         "url": "https://github.com/AgriciDaniel/claude-seo.git",
